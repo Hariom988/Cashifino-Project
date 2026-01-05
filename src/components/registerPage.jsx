@@ -1,13 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
-import LoginImage from "../../public/assets/login-image.svg";
+import Link from "next/link";
+import LoginImage from "../../public/login-image.svg";
 
 const RegisterForm = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -96,7 +97,7 @@ const RegisterForm = () => {
       alert(`Welcome ${newUser.name}! Your account has been created.`);
 
       // Redirect to home page
-      navigate("/");
+      router.push("/");
     }
   };
 
@@ -126,7 +127,7 @@ const RegisterForm = () => {
 
       console.log("Google signup successful");
       alert(`Welcome ${decoded.name}! Account created successfully.`);
-      navigate("/");
+      router.push("/");
     } catch (error) {
       console.error("Google signup error:", error);
       alert("Google signup failed");
@@ -144,7 +145,7 @@ const RegisterForm = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="hidden md:flex max-w-1/2 flex-1 items-center justify-center">
             <img
-              src={LoginImage}
+              src={LoginImage.src}
               alt="Registration illustration"
               className="w-full -ml-5 max-w-md object-contain"
             />

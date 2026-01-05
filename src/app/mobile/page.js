@@ -3,7 +3,6 @@ export default function MobilePage() {
   return (
     <>
       <MobileSellPage />
-
     </>
   );
 };

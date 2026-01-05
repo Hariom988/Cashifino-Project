@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
-import LoginImage from "../../public/assets/login-image.svg";
+import LoginImage from "../../public/login-image.svg";
 import Link from "next/link";
 
 const LoginForm = () => {
@@ -91,7 +91,7 @@ const LoginForm = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="hidden md:flex max-w-1/2 flex-1 items-center justify-center">
             <img
-              src={LoginImage}
+              src={LoginImage.src}
               alt="Login illustration"
               className="w-full -ml-5 max-w-md object-contain"
             />
