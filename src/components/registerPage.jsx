@@ -150,7 +150,6 @@ const RegisterForm = () => {
               className="w-full -ml-5 max-w-md object-contain"
             />
           </div>
-
           <div className="flex-1 pr-5 w-full max-w-full mx-auto">
             <div className="mb-8 text-center">
               <h1 className="text-4xl font-bold text-green-600 mb-2">
