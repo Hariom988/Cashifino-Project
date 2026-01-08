@@ -2,6 +2,7 @@ import React from "react";
 import { theme } from "../../config/theme";
 import heroImage from "../../public/hero-image.jpg";
 import Link from "next/link";
+import Carousel from "./carousel";
 const CategorySection = () => {
   const categories = [
     {
@@ -252,65 +253,7 @@ const CategorySection = () => {
         </section>
 
         {/* hero-section */}
-        <section
-          id="hero-section"
-          className="bg-cover bg-center rounded-lg sm:rounded-xl lg:min-h-full md:rounded-2xl min-h-62.5 shadow-xl  flex-1 flex flex-col justify-center items-start relative overflow-hidden"
-          style={{ backgroundImage: `url(${heroImage.src})` }}
-        >
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/20 rounded-lg sm:rounded-xl md:rounded-2xl"></div>
-
-          {/* Content Container */}
-          <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 w-full max-w-4xl">
-            {/* Main Heading */}
-            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-              Don't miss amazing
-              <br className="hidden sm:block" /> gadget deals
-            </h1>
-
-            {/* Subheading */}
-            <h4 className="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal opacity-90">
-              Sign up for the daily newsletters
-            </h4>
-
-            {/* Email Input & Subscribe Button */}
-            <div className="mt-4 sm:mt-5 md:mt-6 lg:mt-8 flex items-center bg-white rounded-full shadow-lg max-w-md overflow-hidden">
-              {/* Email Icon */}
-              <div className="pl-3 sm:pl-4 pr-2">
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-
-              {/* Email Input */}
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-2 sm:px-3 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base outline-none text-gray-700 placeholder-gray-400 min-w-0"
-              />
-
-              {/* Subscribe Button */}
-              <button
-                type="button"
-                className="px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 bg-green-600 hover:cursor-pointer hover:bg-green-700 text-white text-xs sm:text-sm md:text-base font-semibold rounded-full transition-colors duration-300 whitespace-nowrap"
-              >
-                Subscribe
-              </button>
-            </div>
-          </div>
-
-          {/* Slide Indicators */}
-        </section>
+        <Carousel />
       </div>
     </div>
   );

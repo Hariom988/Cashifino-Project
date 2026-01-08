@@ -78,12 +78,12 @@ const BrandsCategoriesSection = () => {
               <div>View all</div>
             </div>
             {/* image section */}
-            <div className="flex p-5 justify-between items-center flex-row w-[90%] h-3/4 self-center">
+            <div className="flex px-5 justify-between items-center flex-row w-[90%] h-3/4 self-center">
               {/* image 1 */}
               <div className="flex p-2 flex-col max-w-[40%] justify-center items-center bg-gray-100 rounded-lg min-h-1/2">
                 <img
                   src={Mobile.src}
-                  className="max-w-full rounded-lg"
+                  className="max-w-full min-h-full rounded-lg"
                   alt="mobile"
                 />
                 <p className="text-center">Mobile</p>

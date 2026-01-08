@@ -35,14 +35,12 @@ const LoginForm = () => {
             name: user.name,
           })
         );
-        window.dispatchEvent(new Event("userLogin")); // Add this line
-        console.log("Login successful");
+        window.dispatchEvent(new Event("userLogin"));
         router.push("/");
       } else {
         setError("Invalid email or password");
       }
     } catch (error) {
-      console.error("Login error:", error);
       setError("An error occurred during login");
     }
   };
@@ -50,8 +48,6 @@ const LoginForm = () => {
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
-      console.log("Google user info:", decoded);
-
       const googleUser = {
         email: decoded.email,
         name: decoded.name,
@@ -61,7 +57,6 @@ const LoginForm = () => {
 
       localStorage.setItem("currentUser", JSON.stringify(googleUser));
       window.dispatchEvent(new Event("userLogin"));
-      console.log("Google login successful");
       router.push("/");
       const users = JSON.parse(localStorage.getItem("users") || "[]");
       const existingUser = users.find((u) => u.email === decoded.email);
@@ -75,13 +70,11 @@ const LoginForm = () => {
       alert(`Welcome ${decoded.name}!`);
       router.push("/"); // Home page pe redirect
     } catch (error) {
-      console.error("Google login error:", error);
       alert("Google login failed");
     }
   };
 
   const handleGoogleError = () => {
-    console.log("Google Login Failed");
     alert("Google login failed. Please try again.");
   };
 
@@ -147,7 +140,7 @@ const LoginForm = () => {
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
-                    placeholder="••••"
+                    placeholder="••••••••"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-1 focus:ring-green-500 focus:border-green-500 outline-none transition pr-12 text-sm"
                     autoComplete="current-password"
                     required

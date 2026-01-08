@@ -26,7 +26,7 @@ const PromoBanner = () => {
               <p className="text-white text-xs sm:text-sm md:text-base mb-3 md:mb-4 opacity-95 drop-shadow-md">
                 Get instant cash for your used smartphone
               </p>
-              <button className="bg-white hover:cursor-pointer text-black font-semibold px-5 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-md text-sm md:text-base">
+              <button className="bg-white hover:cursor-pointer text-black font-semibold px-5 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-gray-100 transition-all duration-300 shadow-md text-sm md:text-base">
                 Sell Now
               </button>
             </div>
@@ -57,9 +57,9 @@ const PromoBanner = () => {
                 <input
                   type="text"
                   placeholder="Enter device model..."
-                  className="flex-1 bg-white/15 backdrop-blur-sm text-white placeholder-gray-300 px-3 py-2 md:py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-xs sm:text-sm border border-white/30"
+                  className="flex-1 bg-white/15 backdrop-blur-sm text-white placeholder-gray-300 px-3 py-2 md:py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-xs sm:text-sm border border-white/30"
                 />
-                <button className="bg-green-600 hover:cursor-pointer hover:bg-green-700 hover:scale-105 text-white font-semibold px-4 py-2  md:px-5 md:py-2.5 rounded-lg transition-all duration-300 whitespace-nowrap text-xs sm:text-xs shadow-lg">
+                <button className="bg-green-600 hover:cursor-pointer hover:bg-green-700  text-white font-semibold px-4 py-2  md:px-5 md:py-2.5 rounded-lg transition-all duration-300 whitespace-nowrap text-xs sm:text-xs shadow-lg">
                   GET QUOTE
                 </button>
               </div>

@@ -147,8 +147,8 @@ const Footer = () => {
         </div>
 
         {/* Get Your Device Valued Section */}
-        <div className="border-t border-gray-200 pt-4 mb-4">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+        <div className="flex flex-rows  justify-between border-t border-b pb-5 border-gray-200 pt-4">
+          <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between gap-2">
             <div>
               <h3 className="text-sm font-bold">
                 GET YOUR DEVICE VALUED{" "}
@@ -158,30 +158,30 @@ const Footer = () => {
                 Select your device and get an instant price quote
               </p>
             </div>
-            <button className="bg-primary hover:bg-primaryHover text-white font-semibold px-5 py-2 rounded-lg transition-colors whitespace-nowrap text-xs">
+            <button className="bg-green-600 hover:bg-green-700 hover:cursor-pointer text-white font-semibold px-5 py-2 rounded-lg transition-colors whitespace-nowrap text-xs">
               GET QUOTE NOW
             </button>
+          </div>
+          <div className=" border-gray-200 pt-3 flex flex-col sm:flex-row justify-between items-center gap-2 text-[10px] text-gray-600">
+            <div className="flex items-center gap-2">
+              <select className="border border-gray-300 rounded px-2 py-0.5 text-[10px] bg-white">
+                <option>INR</option>
+                <option>USD</option>
+                <option>EUR</option>
+              </select>
+              <select className="border border-gray-300 rounded px-2 py-0.5 text-[10px] bg-white">
+                <option>🇺🇸 Eng</option>
+                <option>🇮🇳 हिन्दी</option>
+              </select>
+            </div>
+
+            <p className="text-[10px] text-center sm:text-right">
+              © {new Date().getFullYear()} Cashifino. All rights reserved.
+            </p>
           </div>
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-200 pt-3 flex flex-col sm:flex-row justify-between items-center gap-2 text-[10px] text-gray-600">
-          <div className="flex items-center gap-2">
-            <select className="border border-gray-300 rounded px-2 py-0.5 text-[10px] bg-white">
-              <option>INR</option>
-              <option>USD</option>
-              <option>EUR</option>
-            </select>
-            <select className="border border-gray-300 rounded px-2 py-0.5 text-[10px] bg-white">
-              <option>🇺🇸 Eng</option>
-              <option>🇮🇳 हिन्दी</option>
-            </select>
-          </div>
-
-          <p className="text-[10px] text-center sm:text-right">
-            © {new Date().getFullYear()} Cashifino. All rights reserved.
-          </p>
-        </div>
       </div>
     </footer>
   );
