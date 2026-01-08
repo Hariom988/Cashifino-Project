@@ -148,13 +148,13 @@ const LoginForm = () => {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                    className="absolute hover:cursor-pointer right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
                     aria-label="Toggle password visibility"
                   >
                     {showPassword ? (
-                      <FiEyeOff size={18} />
-                    ) : (
                       <FiEye size={18} />
+                    ) : (
+                      <FiEyeOff size={18} />
                     )}
                   </button>
                 </div>

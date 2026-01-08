@@ -93,7 +93,6 @@ const RegisterForm = () => {
       // Trigger navbar update event
       window.dispatchEvent(new Event("userLogin"));
 
-      console.log("Registration successful:", newUser);
       alert(`Welcome ${newUser.name}! Your account has been created.`);
 
       // Redirect to home page
@@ -104,7 +103,6 @@ const RegisterForm = () => {
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
-      console.log("Google user info:", decoded);
 
       const googleUser = {
         email: decoded.email,
@@ -129,13 +127,11 @@ const RegisterForm = () => {
       alert(`Welcome ${decoded.name}! Account created successfully.`);
       router.push("/");
     } catch (error) {
-      console.error("Google signup error:", error);
       alert("Google signup failed");
     }
   };
 
   const handleGoogleError = () => {
-    console.log("Google Signup Failed");
     alert("Google signup failed. Please try again.");
   };
 
@@ -229,13 +225,13 @@ const RegisterForm = () => {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                    className="absolute hover:cursor-pointer right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
                     aria-label="Toggle password visibility"
                   >
                     {showPassword ? (
-                      <FiEyeOff size={18} />
-                    ) : (
                       <FiEye size={18} />
+                    ) : (
+                      <FiEyeOff size={18} />
                     )}
                   </button>
                 </div>
@@ -266,13 +262,13 @@ const RegisterForm = () => {
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                    className="absolute hover:cursor-pointer right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
                     aria-label="Toggle confirm password visibility"
                   >
                     {showConfirmPassword ? (
-                      <FiEyeOff size={18} />
-                    ) : (
                       <FiEye size={18} />
+                    ) : (
+                      <FiEyeOff size={18} />
                     )}
                   </button>
                 </div>
