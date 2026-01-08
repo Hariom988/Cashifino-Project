@@ -1,11 +1,11 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
 import Link from "next/link";
-import HowItWorks from "../components/howItWorks";
-import Benefits from "../components/benefits";
-import TopSellingBrands from "../components/topSellingBrand";
-import Faq from "../components/faq";
-import ProductSearch from "../components/productSearch";
+import HowItWorks from "@/components/howItWorks";
+import Benefits from "@/components/benefits";
+import TopSellingBrands from "@/components/topSellingBrand";
+import Faq from "@/components/faq";
+import ProductSearch from "@/components/productSearch";
 
 const MobileSellPage = () => {
   const mobileSellingFAQs = [
